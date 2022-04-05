@@ -1,18 +1,11 @@
-﻿<Window
-        x:Class="Telegram.Views.MainView"
+﻿<Window x:Class="Telegram.Views.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Telegram" Height="600" Width="900" MinHeight="600" MinWidth="900" Loaded="Window_Loaded" mc:Ignorable="d" Icon="C:\Users\HP\source\repos\Telegram\Telegram\Resources\telegram.ico">
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}" TextElement.FontWeight="Regular" TextElement.FontSize="13" TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto" Background="{DynamicResource MaterialDesignPaper}" FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Telegram" MinHeight="600" MinWidth="900" Loaded="Window_Loaded" Icon="/Views/telegram.ico" mc:Ignorable="d">
 
     <Grid>
 
@@ -95,7 +88,7 @@
 
         <ListBox Name="MessagesListBox" ItemsSource="{Binding Messages, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:ListBoxItemAssist.ShowSelection="False" HorizontalContentAlignment="Stretch" FontFamily="Calibri" Grid.Row="1" Grid.Column="1">
 
-            <ScrollViewer.VerticalScrollBarVisibility>Hidden</ScrollViewer.VerticalScrollBarVisibility>
+            <ScrollViewer.VerticalScrollBarVisibility>Auto</ScrollViewer.VerticalScrollBarVisibility>
 
             <ListBox.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
@@ -143,7 +136,7 @@
         <DockPanel Name="Picker" Grid.Row="2" Grid.Column="1">
             <Border DockPanel.Dock="Left" Background="Gray" Width="0.5" Margin="0.5, 0, 0, 0"/>
 
-            <Button DockPanel.Dock="Left" x:Name="akula" Style="{StaticResource MaterialDesignIconForegroundButton}" Click="EmojiPicker_ButtonClicked">
+            <Button DockPanel.Dock="Left" Style="{StaticResource MaterialDesignIconForegroundButton}" Click="EmojiPicker_ButtonClicked">
 
                 <materialDesign:PackIcon Kind="Emoticon" />
                 <Button.Margin>7, 0, 0, 0</Button.Margin>
